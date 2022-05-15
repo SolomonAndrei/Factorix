@@ -23,12 +23,12 @@ export default function App() {
           name="Login"
           component={LoginScreen}
         />
-        <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen}/>
+        <Stack.Screen options={{ headerShown: false  }} name="Home" component={HomeScreen} />
         <Stack.Screen  name="Calendar" component={CalendarScreen}/>
         <Stack.Screen  name="Stoc" component={StocScreen}/>
         <Stack.Screen  name="Comenzi" component={ComenziScreen}/>
         <Stack.Screen  name="MeniuStoc" component={StocMeniuScreen}/>
-        <Stack.Screen  name="Materiale" component={MaterialeScreen}/>
+        <Stack.Screen  name="Inventar Materiale" component={MaterialeScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

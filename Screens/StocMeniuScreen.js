@@ -11,7 +11,7 @@ import CalendarIcon from "react-calendar-icon";
 export default function StocMeniuScreen ({ navigation: { navigate } }) {
   return (
     <View>
-         <TouchableOpacity style={styles.butonMateriale} onPress={() => navigate("Materiale")} >
+         <TouchableOpacity style={styles.butonMateriale} onPress={() => navigate("Inventar Materiale")} >
              <Text style={styles.scris}>Materiale</Text>
          </TouchableOpacity>
          <TouchableOpacity style={styles.butonStoc} onPress={() => navigate("Stoc")} >

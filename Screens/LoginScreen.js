@@ -50,6 +50,7 @@ export default function LoginScreen({ navigation: { navigate } }) {
                 });
         }
          const onSubmitHandler = () => {
+
                  const payload = {
                      email,
                      password,
@@ -92,7 +93,7 @@ export default function LoginScreen({ navigation: { navigate } }) {
     <KeyboardAvoidingView style={styles.container} behavior="padding">
     <View >
 
-    <Text style ={styles.NumeLogo}> Factorix </Text>
+    <Text style ={styles.NumeLogo}> Factorixx </Text>
     <Text style={styles.welcome}>{isLogin ? 'Login' : 'Signup'}</Text>
     </View>
       <View style={styles.inputContainer}>
@@ -114,21 +115,21 @@ export default function LoginScreen({ navigation: { navigate } }) {
         <TextInput
         style={styles.input}
         placeholder="ConfirmPassword"
-        onChangeText={(text) => setPassword2(text)}>
+        onChangeText={(text) => setPassword2(text)}
         secureTextEntry
-        </TextInput>}
+        />}
 
       </View>
       <View style={styles.buttonContainer}>
       <Text style={[styles.message, {color: isError ? 'red' : 'green'}]}>{message ? getMessage() : null}</Text>
         <TouchableOpacity onPress={onSubmitHandler} styles={styles.button}>
-          <Text style={styles.buttonLogin}>Login</Text>
+          <Text style={styles.buttonLogin}>{isLogin ? 'Login' : 'Register'}</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={onChangeHandler} styles={styles.button}>
-          <Text style={styles.buttonRegister}>Register</Text>
+          <Text style={styles.buttonRegister}>{isLogin ? 'Register' : 'Login'}</Text>
         </TouchableOpacity>
 
-            <Text style={styles.Nume}> by Solomon Andrei </Text>
+
       </View>
     </KeyboardAvoidingView>
   );
@@ -138,12 +139,13 @@ export default function LoginScreen({ navigation: { navigate } }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: "40%",
+    marginTop: "20%",
     justifyContent: "center",
     alignItems: "center",
 
   },
   inputContainer: {
+
     width: "80%",
   },
   buttonContainer: {
@@ -184,7 +186,7 @@ const styles = StyleSheet.create({
   },
 
   welcome:{
-    marginLeft:30,
+    marginLeft:35,
   fontSize: 20,
   fontWeight:"bold",
   color:"#0782F9",

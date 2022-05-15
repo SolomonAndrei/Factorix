@@ -10,26 +10,30 @@ import {KeyboardAvoidingView,
 import CalendarIcon from "react-calendar-icon";
 import {NavigationContainer} from "@react-navigation/native";
 
+
 import { LoginScreen } from "./LoginScreen";
-
-
-
 
 export default function HomeScreen ({navigation: {navigate}}) {
 
     return (
-            <View styles={{backgroundColor: '#FFFFFF'}}>
+            <View style={{flex: 1,backgroundColor: '#FFFFFF'}}>
+
                 <TouchableOpacity style={styles.text} onPress={() => navigate("Login")} >
                           <Text style={styles.scris1}>Logout</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.poza} onPress={() => navigate("Calendar")} >
+                                     <Image source={require('../assets/Calendar.jpg')} resizeMode='contain' style={{ height: 125, marginLeft:-250, marginTop:-70 }} />
+                                </TouchableOpacity>
                 <Image style={styles.Computer} source={ require('../assets/Calculator.png') } />
 
                 <TouchableOpacity style={styles.butonLogout} onPress={() => navigate("Comenzi")} >
-                           <Text style={styles.scris}>Comenzi</Text>
+                           <Text style={styles.scris1}>Comenzi</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.butonComenzi} onPress={() => navigate("MeniuStoc")} >
-                                           <Text style={styles.scris}>Stoc</Text>
+                                           <Text style={styles.scris}>Meniu Stoc</Text>
                 </TouchableOpacity>
+
+
             </View>
         )
     }
@@ -55,6 +59,7 @@ export default function HomeScreen ({navigation: {navigate}}) {
     scris:{
         color:"white",
         fontSize:18,
+        marginLeft:-15,
     },
 
     Computer:{
